@@ -43,7 +43,7 @@ public static class EmotionRoBERTaModel
             ModelPath = modelPath,
             TokenizerPath = vocabPath,
             Labels = Labels,
-            MaxTokens = 128,
+            MaxTokenLength = 128,
             BatchSize = 8
         });
 

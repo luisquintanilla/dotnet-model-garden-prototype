@@ -9,4 +9,21 @@ Console.WriteLine("Classifier ready!\n");
 
 Console.WriteLine("Available labels: " + string.Join(", ", SentimentDistilBERTModel.Labels));
 
-Console.WriteLine("\nDone! Use classifier.Transform(dataView) with ML.NET pipelines.");
+// Classify some texts
+var texts = new[]
+{
+    "This movie was absolutely wonderful!",
+    "The food was terrible and the service was slow.",
+    "I love programming in C# with ML.NET",
+    "The weather is okay today."
+};
+
+Console.WriteLine("\nClassifying texts:");
+var results = classifier.Classify(texts);
+for (int i = 0; i < texts.Length; i++)
+{
+    Console.WriteLine($"  \"{texts[i]}\"");
+    Console.WriteLine($"    → {results[i].PredictedLabel} (confidence: {results[i].Confidence:P1})");
+}
+
+Console.WriteLine("\nDone!");

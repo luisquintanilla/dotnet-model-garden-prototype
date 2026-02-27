@@ -1,21 +1,21 @@
 {
+  "defaultSource": "huggingface",
   "model": {
-    "id": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
-    "revision": "main",
     "files": [
       {
+        "size": 267955711,
         "path": "onnx/model.onnx",
-        "sha256": "TODO",
-        "size": 0
+        "sha256": "252cf7048af94a1599019fef35961b2bd3d6db13df0b0a4b032b92baeae31939"
       }
-    ]
+    ],
+    "id": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
+    "revision": "main"
   },
   "sources": {
     "huggingface": {
-      "type": "huggingface",
+      "revision": "main",
       "repo": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
-      "revision": "main"
+      "type": "huggingface"
     }
-  },
-  "defaultSource": "huggingface"
+  }
 }

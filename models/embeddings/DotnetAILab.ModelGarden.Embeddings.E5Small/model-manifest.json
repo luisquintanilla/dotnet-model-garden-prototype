@@ -1,21 +1,21 @@
 {
+  "defaultSource": "huggingface",
   "model": {
-    "id": "intfloat/e5-small-v2",
-    "revision": "main",
     "files": [
       {
-        "path": "onnx/model.onnx",
-        "sha256": "TODO",
-        "size": 0
+        "size": 133093468,
+        "path": "model.onnx",
+        "sha256": "4b8205be2a3c5fc53c6534d76a2012064f7309c162b806f2889c6ec8ec4fdcba"
       }
-    ]
+    ],
+    "id": "intfloat/e5-small-v2",
+    "revision": "main"
   },
   "sources": {
     "huggingface": {
-      "type": "huggingface",
+      "revision": "main",
       "repo": "intfloat/e5-small-v2",
-      "revision": "main"
+      "type": "huggingface"
     }
-  },
-  "defaultSource": "huggingface"
+  }
 }

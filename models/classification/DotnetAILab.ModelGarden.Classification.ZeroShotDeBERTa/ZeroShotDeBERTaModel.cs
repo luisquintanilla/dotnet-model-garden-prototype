@@ -37,7 +37,7 @@ public static class ZeroShotDeBERTaModel
             ModelPath = modelPath,
             TokenizerPath = vocabPath,
             Labels = Labels,
-            MaxTokens = 256,
+            MaxTokenLength = 256,
             BatchSize = 8
         });
 

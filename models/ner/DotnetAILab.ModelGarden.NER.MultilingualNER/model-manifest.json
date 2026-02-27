@@ -1,21 +1,21 @@
 {
+  "defaultSource": "huggingface",
   "model": {
-    "id": "Davlan/bert-base-multilingual-cased-ner-hrl",
-    "revision": "main",
     "files": [
       {
+        "size": 709345293,
         "path": "onnx/model.onnx",
-        "sha256": "TODO",
-        "size": 0
+        "sha256": "6c018415dc8129b358e9d629543c17481ad067ad02f9a6b8750473f161f9c5bd"
       }
-    ]
+    ],
+    "id": "Davlan/bert-base-multilingual-cased-ner-hrl",
+    "revision": "main"
   },
   "sources": {
     "huggingface": {
-      "type": "huggingface",
+      "revision": "main",
       "repo": "Davlan/bert-base-multilingual-cased-ner-hrl",
-      "revision": "main"
+      "type": "huggingface"
     }
-  },
-  "defaultSource": "huggingface"
+  }
 }

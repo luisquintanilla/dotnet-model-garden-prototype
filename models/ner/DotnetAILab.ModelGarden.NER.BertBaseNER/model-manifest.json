@@ -1,21 +1,21 @@
 {
+  "defaultSource": "huggingface",
   "model": {
-    "id": "dslim/bert-base-NER",
-    "revision": "main",
     "files": [
       {
+        "size": 431172619,
         "path": "onnx/model.onnx",
-        "sha256": "TODO",
-        "size": 0
+        "sha256": "963039b81eec5b33e23d84826ccdf1e8f8ada776f320e692113034cfae384617"
       }
-    ]
+    ],
+    "id": "dslim/bert-base-NER",
+    "revision": "main"
   },
   "sources": {
     "huggingface": {
-      "type": "huggingface",
+      "revision": "main",
       "repo": "dslim/bert-base-NER",
-      "revision": "main"
+      "type": "huggingface"
     }
-  },
-  "defaultSource": "huggingface"
+  }
 }

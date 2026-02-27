@@ -1,21 +1,21 @@
 {
+  "defaultSource": "huggingface",
   "model": {
-    "id": "BAAI/bge-reranker-base",
-    "revision": "main",
     "files": [
       {
+        "size": 1112459588,
         "path": "onnx/model.onnx",
-        "sha256": "TODO",
-        "size": 0
+        "sha256": "15b9a8c3da82eddf263df571281166e00e9308fe19d077084b642ebfcaf06d2b"
       }
-    ]
+    ],
+    "id": "BAAI/bge-reranker-base",
+    "revision": "main"
   },
   "sources": {
     "huggingface": {
-      "type": "huggingface",
+      "revision": "main",
       "repo": "BAAI/bge-reranker-base",
-      "revision": "main"
+      "type": "huggingface"
     }
-  },
-  "defaultSource": "huggingface"
+  }
 }

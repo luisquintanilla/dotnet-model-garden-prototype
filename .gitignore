@@ -20,6 +20,9 @@ artifacts/
 *.nupkg
 *.snupkg
 
+# Local NuGet package feed (for development)
+local-packages/
+
 # OS
 .DS_Store
 Thumbs.db

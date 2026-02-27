@@ -7,8 +7,8 @@
     <Description>gte-small embedding model package. Model binary auto-downloads on first use via ModelPackages SDK.</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ModelPackages" Version="0.1.0-*" />
-    <PackageReference Include="MLNet.TextInference.Onnx" Version="0.1.0-*" />
+    <PackageReference Include="ModelPackages" Version="0.1.0" />
+    <PackageReference Include="MLNet.TextInference.Onnx" Version="0.1.0-preview.1.1" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="model-manifest.json" />

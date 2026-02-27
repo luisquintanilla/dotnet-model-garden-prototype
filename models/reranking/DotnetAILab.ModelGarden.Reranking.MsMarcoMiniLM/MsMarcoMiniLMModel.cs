@@ -29,11 +29,11 @@ public static class MsMarcoMiniLMModel
         var vocabPath = ExtractEmbeddedVocab();
 
         var mlContext = new MLContext();
-        var estimator = mlContext.Transforms.OnnxReranker(new OnnxRerankerOptions
+        var estimator = mlContext.Transforms.OnnxRerank(new OnnxRerankerOptions
         {
             ModelPath = modelPath,
             TokenizerPath = vocabPath,
-            MaxTokens = 512,
+            MaxTokenLength = 512,
             BatchSize = 8
         });
 

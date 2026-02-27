@@ -33,7 +33,7 @@ public static class MiniLMSquad2Model
         {
             ModelPath = modelPath,
             TokenizerPath = vocabPath,
-            MaxTokens = 384,
+            MaxTokenLength = 384,
             MaxAnswerLength = 30,
             BatchSize = 8
         });
