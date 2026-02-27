@@ -1,0 +1,6 @@
+{
+  "name": "Model Garden",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:10.0",
+  "features": {},
+  "postCreateCommand": "dotnet restore"
+}

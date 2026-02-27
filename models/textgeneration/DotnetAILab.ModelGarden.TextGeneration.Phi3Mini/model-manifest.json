@@ -1,0 +1,46 @@
+{
+  "model": {
+    "id": "microsoft/Phi-3-mini-4k-instruct-onnx",
+    "revision": "main",
+    "files": [
+      {
+        "path": "cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/phi3-mini-4k-instruct-cpu-int4-rtn-block-32-acc-level-4.onnx",
+        "sha256": "TODO",
+        "size": 0
+      },
+      {
+        "path": "cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/phi3-mini-4k-instruct-cpu-int4-rtn-block-32-acc-level-4.onnx.data",
+        "sha256": "TODO",
+        "size": 0
+      },
+      {
+        "path": "cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/genai_config.json",
+        "sha256": "TODO",
+        "size": 0
+      },
+      {
+        "path": "cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/tokenizer.model",
+        "sha256": "TODO",
+        "size": 0
+      },
+      {
+        "path": "cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/tokenizer_config.json",
+        "sha256": "TODO",
+        "size": 0
+      },
+      {
+        "path": "cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/special_tokens_map.json",
+        "sha256": "TODO",
+        "size": 0
+      }
+    ]
+  },
+  "sources": {
+    "huggingface": {
+      "type": "huggingface",
+      "repo": "microsoft/Phi-3-mini-4k-instruct-onnx",
+      "revision": "main"
+    }
+  },
+  "defaultSource": "huggingface"
+}

@@ -1,0 +1,21 @@
+{
+  "model": {
+    "id": "Davlan/bert-base-multilingual-cased-ner-hrl",
+    "revision": "main",
+    "files": [
+      {
+        "path": "onnx/model.onnx",
+        "sha256": "TODO",
+        "size": 0
+      }
+    ]
+  },
+  "sources": {
+    "huggingface": {
+      "type": "huggingface",
+      "repo": "Davlan/bert-base-multilingual-cased-ner-hrl",
+      "revision": "main"
+    }
+  },
+  "defaultSource": "huggingface"
+}

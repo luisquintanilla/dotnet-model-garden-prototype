@@ -1,0 +1,21 @@
+{
+  "model": {
+    "id": "BAAI/bge-reranker-base",
+    "revision": "main",
+    "files": [
+      {
+        "path": "onnx/model.onnx",
+        "sha256": "TODO",
+        "size": 0
+      }
+    ]
+  },
+  "sources": {
+    "huggingface": {
+      "type": "huggingface",
+      "repo": "BAAI/bge-reranker-base",
+      "revision": "main"
+    }
+  },
+  "defaultSource": "huggingface"
+}

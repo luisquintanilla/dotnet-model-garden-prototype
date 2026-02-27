@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>DotnetAILab.ModelGarden.TextGeneration.Phi3Mini</PackageId>
+    <Description>Phi-3 Mini text generation model package. Model directory auto-downloads on first use via ModelPackages SDK. Uses ONNX Runtime GenAI for local inference.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ModelPackages" Version="0.1.0-*" />
+    <PackageReference Include="MLNet.TextGeneration.OnnxGenAI" Version="0.1.0-*" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="model-manifest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="build\DotnetAILab.ModelGarden.TextGeneration.Phi3Mini.props" Pack="true" PackagePath="build\" />
+    <None Include="build\DotnetAILab.ModelGarden.TextGeneration.Phi3Mini.targets" Pack="true" PackagePath="build\" />
+  </ItemGroup>
+</Project>

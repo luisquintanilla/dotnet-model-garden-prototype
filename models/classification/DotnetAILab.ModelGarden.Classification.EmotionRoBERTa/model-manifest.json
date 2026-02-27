@@ -1,0 +1,21 @@
+{
+  "model": {
+    "id": "SamLowe/roberta-base-go_emotions",
+    "revision": "main",
+    "files": [
+      {
+        "path": "onnx/model.onnx",
+        "sha256": "TODO",
+        "size": 0
+      }
+    ]
+  },
+  "sources": {
+    "huggingface": {
+      "type": "huggingface",
+      "repo": "SamLowe/roberta-base-go_emotions",
+      "revision": "main"
+    }
+  },
+  "defaultSource": "huggingface"
+}

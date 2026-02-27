@@ -1,0 +1,25 @@
+# Build output
+bin/
+obj/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# ONNX model binaries (downloaded at runtime, not committed)
+*.onnx
+
+# Saved ML.NET models
+*.mlnet
+
+# NuGet artifacts
+artifacts/
+*.nupkg
+*.snupkg
+
+# OS
+.DS_Store
+Thumbs.db

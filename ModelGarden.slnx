@@ -1,0 +1,32 @@
+<Solution>
+  <Folder Name="/models/embeddings/">
+    <Project Path="models\embeddings\DotnetAILab.ModelGarden.Embeddings.AllMiniLM\DotnetAILab.ModelGarden.Embeddings.AllMiniLM.csproj" />
+    <Project Path="models\embeddings\DotnetAILab.ModelGarden.Embeddings.BgeSmallEn\DotnetAILab.ModelGarden.Embeddings.BgeSmallEn.csproj" />
+    <Project Path="models\embeddings\DotnetAILab.ModelGarden.Embeddings.E5Small\DotnetAILab.ModelGarden.Embeddings.E5Small.csproj" />
+    <Project Path="models\embeddings\DotnetAILab.ModelGarden.Embeddings.GteSmall\DotnetAILab.ModelGarden.Embeddings.GteSmall.csproj" />
+  </Folder>
+  <Folder Name="/models/classification/">
+    <Project Path="models\classification\DotnetAILab.ModelGarden.Classification.SentimentDistilBERT\DotnetAILab.ModelGarden.Classification.SentimentDistilBERT.csproj" />
+    <Project Path="models\classification\DotnetAILab.ModelGarden.Classification.EmotionRoBERTa\DotnetAILab.ModelGarden.Classification.EmotionRoBERTa.csproj" />
+    <Project Path="models\classification\DotnetAILab.ModelGarden.Classification.ZeroShotDeBERTa\DotnetAILab.ModelGarden.Classification.ZeroShotDeBERTa.csproj" />
+  </Folder>
+  <Folder Name="/models/reranking/">
+    <Project Path="models\reranking\DotnetAILab.ModelGarden.Reranking.BgeReranker\DotnetAILab.ModelGarden.Reranking.BgeReranker.csproj" />
+    <Project Path="models\reranking\DotnetAILab.ModelGarden.Reranking.MsMarcoMiniLM\DotnetAILab.ModelGarden.Reranking.MsMarcoMiniLM.csproj" />
+  </Folder>
+  <Folder Name="/models/ner/">
+    <Project Path="models\ner\DotnetAILab.ModelGarden.NER.BertBaseNER\DotnetAILab.ModelGarden.NER.BertBaseNER.csproj" />
+    <Project Path="models\ner\DotnetAILab.ModelGarden.NER.MultilingualNER\DotnetAILab.ModelGarden.NER.MultilingualNER.csproj" />
+  </Folder>
+  <Folder Name="/models/qa/">
+    <Project Path="models\qa\DotnetAILab.ModelGarden.QA.MiniLMSquad2\DotnetAILab.ModelGarden.QA.MiniLMSquad2.csproj" />
+    <Project Path="models\qa\DotnetAILab.ModelGarden.QA.RobertaSquad2\DotnetAILab.ModelGarden.QA.RobertaSquad2.csproj" />
+  </Folder>
+  <Folder Name="/models/textgeneration/">
+    <Project Path="models\textgeneration\DotnetAILab.ModelGarden.TextGeneration.Phi3Mini\DotnetAILab.ModelGarden.TextGeneration.Phi3Mini.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples\EmbeddingSample\EmbeddingSample.csproj" />
+    <Project Path="samples\ClassificationSample\ClassificationSample.csproj" />
+  </Folder>
+</Solution>

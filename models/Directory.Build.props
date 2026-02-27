@@ -1,0 +1,10 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- All model packages are packable -->
+    <IsPackable>true</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+</Project>
