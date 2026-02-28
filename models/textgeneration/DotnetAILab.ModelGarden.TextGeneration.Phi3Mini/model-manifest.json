@@ -5,33 +5,33 @@
     "files": [
       {
         "path": "cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/phi3-mini-4k-instruct-cpu-int4-rtn-block-32-acc-level-4.onnx",
-        "sha256": "TODO",
-        "size": 0
+        "sha256": "385cd1b908a0d2f8634e86d30236f6dbb7ae660eb3943fd1ef5bdc3847326480",
+        "size": 231335
       },
       {
         "path": "cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/phi3-mini-4k-instruct-cpu-int4-rtn-block-32-acc-level-4.onnx.data",
-        "sha256": "TODO",
-        "size": 0
+        "sha256": "",
+        "size": 2722861056
       },
       {
         "path": "cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/genai_config.json",
-        "sha256": "TODO",
-        "size": 0
+        "sha256": "d5ec04466a3d080de412409bf762219628f375314cfff303976733364baec5a2",
+        "size": 1576
       },
       {
         "path": "cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/tokenizer.model",
-        "sha256": "TODO",
-        "size": 0
+        "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+        "size": 499723
       },
       {
         "path": "cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/tokenizer_config.json",
-        "sha256": "TODO",
-        "size": 0
+        "sha256": "32f66c2bab499baaa8341819ad9a13342f957501ce1e989bcb90853a01336cc0",
+        "size": 3441
       },
       {
         "path": "cpu_and_mobile/cpu-int4-rtn-block-32-acc-level-4/special_tokens_map.json",
-        "sha256": "TODO",
-        "size": 0
+        "sha256": "810adc6e6c6ef2f56c285ef930d243358a3a9f05e36a01c5a10bafc6fac4609b",
+        "size": 599
       }
     ]
   },
