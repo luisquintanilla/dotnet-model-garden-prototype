@@ -14,10 +14,13 @@ public static class Phi3MiniModel
     private static readonly Lazy<ModelPackage> Package = new(() =>
         ModelPackage.FromManifestResource(typeof(Phi3MiniModel).Assembly));
 
-    /// <summary>Returns local path to the cached model directory.</summary>
-    public static Task<string> EnsureModelAsync(
+    /// <summary>Returns local path to the cached model directory containing all model files.</summary>
+    public static async Task<string> EnsureModelAsync(
         ModelOptions? options = null, CancellationToken ct = default)
-        => Package.Value.EnsureModelAsync(options, ct);
+    {
+        var files = await Package.Value.EnsureFilesAsync(options, ct);
+        return files.ModelDirectory;
+    }
 
     /// <summary>
     /// Creates a text generation transformer backed by the local ONNX model.
