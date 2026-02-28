@@ -11,10 +11,6 @@
     <PackageReference Include="MLNet.TextInference.Onnx" Version="0.1.0-preview.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="model-manifest.json" />
-    <EmbeddedResource Include="vocab.txt" Condition="Exists('vocab.txt')" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="build\DotnetAILab.ModelGarden.Embeddings.GteSmall.props" Pack="true" PackagePath="build\" />
     <None Include="build\DotnetAILab.ModelGarden.Embeddings.GteSmall.targets" Pack="true" PackagePath="build\" />
   </ItemGroup>

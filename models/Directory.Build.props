@@ -7,4 +7,19 @@
     <NoWarn>$(NoWarn);CS1591</NoWarn>
   </PropertyGroup>
 
+  <!-- Embed model manifest and any tokenizer files present in the project directory.
+       The Condition="Exists(...)" means only files actually present get embedded.
+       Model authors just drop the right tokenizer file(s) into their project folder. -->
+  <ItemGroup>
+    <EmbeddedResource Include="model-manifest.json" />
+    <EmbeddedResource Include="vocab.txt" Condition="Exists('vocab.txt')" />
+    <EmbeddedResource Include="vocab.json" Condition="Exists('vocab.json')" />
+    <EmbeddedResource Include="merges.txt" Condition="Exists('merges.txt')" />
+    <EmbeddedResource Include="spm.model" Condition="Exists('spm.model')" />
+    <EmbeddedResource Include="tokenizer.json" Condition="Exists('tokenizer.json')" />
+    <EmbeddedResource Include="tokenizer.model" Condition="Exists('tokenizer.model')" />
+    <EmbeddedResource Include="tokenizer_config.json" Condition="Exists('tokenizer_config.json')" />
+    <EmbeddedResource Include="special_tokens_map.json" Condition="Exists('special_tokens_map.json')" />
+  </ItemGroup>
+
 </Project>

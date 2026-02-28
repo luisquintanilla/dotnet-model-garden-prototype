@@ -27,13 +27,13 @@ public static class GteSmallModel
         ModelOptions? options = null, CancellationToken ct = default)
     {
         var modelPath = await EnsureModelAsync(options, ct);
-        var vocabPath = ExtractEmbeddedVocab();
+        var tokenizerDir = ExtractEmbeddedTokenizer();
 
         var mlContext = new MLContext();
         var estimator = new OnnxTextEmbeddingEstimator(mlContext, new OnnxTextEmbeddingOptions
         {
             ModelPath = modelPath,
-            TokenizerPath = vocabPath,
+            TokenizerPath = tokenizerDir,
             Pooling = PoolingStrategy.MeanPooling,
             Normalize = true,
             BatchSize = 32
@@ -53,27 +53,33 @@ public static class GteSmallModel
         ModelOptions? options = null, CancellationToken ct = default)
         => Package.Value.VerifyModelAsync(options, ct);
 
-    private static string ExtractEmbeddedVocab()
+    private static readonly string[] TokenizerFilePatterns =
+        ["vocab.txt", "vocab.json", "merges.txt", "spm.model", "tokenizer.json",
+         "tokenizer.model", "tokenizer_config.json", "special_tokens_map.json"];
+
+    private static string ExtractEmbeddedTokenizer()
     {
         var assembly = typeof(GteSmallModel).Assembly;
-        var resourceName = assembly.GetManifestResourceNames()
-            .FirstOrDefault(n => n.EndsWith("vocab.txt", StringComparison.OrdinalIgnoreCase));
+        var tokenizerDir = Path.Combine(
+            Path.GetTempPath(), "modelpackages-tokenizer", "GteSmall");
+        Directory.CreateDirectory(tokenizerDir);
 
-        if (resourceName == null)
-            throw new FileNotFoundException("Embedded resource 'vocab.txt' not found in assembly.");
-
-        var tempDir = Path.Combine(Path.GetTempPath(), "modelpackages-vocab");
-        Directory.CreateDirectory(tempDir);
-        var vocabPath = Path.Combine(tempDir, "vocab.txt");
-
-        if (!File.Exists(vocabPath))
+        foreach (var resourceName in assembly.GetManifestResourceNames())
         {
-            using var stream = assembly.GetManifestResourceStream(resourceName)!;
-            using var file = File.Create(vocabPath);
-            stream.CopyTo(file);
+            var matchedFile = TokenizerFilePatterns
+                .FirstOrDefault(p => resourceName.EndsWith(p, StringComparison.OrdinalIgnoreCase));
+            if (matchedFile == null) continue;
+
+            var targetPath = Path.Combine(tokenizerDir, matchedFile);
+            if (!File.Exists(targetPath))
+            {
+                using var stream = assembly.GetManifestResourceStream(resourceName)!;
+                using var file = File.Create(targetPath);
+                stream.CopyTo(file);
+            }
         }
 
-        return vocabPath;
+        return tokenizerDir;
     }
 
     private sealed class TextData

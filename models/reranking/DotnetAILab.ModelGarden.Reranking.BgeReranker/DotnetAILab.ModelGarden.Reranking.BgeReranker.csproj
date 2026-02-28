@@ -11,10 +11,6 @@
     <PackageReference Include="MLNet.TextInference.Onnx" Version="0.1.0-preview.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="model-manifest.json" />
-    <EmbeddedResource Include="tokenizer.json" Condition="Exists('tokenizer.json')" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="build\DotnetAILab.ModelGarden.Reranking.BgeReranker.props" Pack="true" PackagePath="build\" />
     <None Include="build\DotnetAILab.ModelGarden.Reranking.BgeReranker.targets" Pack="true" PackagePath="build\" />
   </ItemGroup>

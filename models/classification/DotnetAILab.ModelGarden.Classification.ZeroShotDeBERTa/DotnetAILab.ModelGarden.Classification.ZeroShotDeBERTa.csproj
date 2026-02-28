@@ -11,10 +11,6 @@
     <PackageReference Include="MLNet.TextInference.Onnx" Version="0.1.0-preview.1.1" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="model-manifest.json" />
-    <EmbeddedResource Include="spm.model" Condition="Exists('spm.model')" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="build\DotnetAILab.ModelGarden.Classification.ZeroShotDeBERTa.props" Pack="true" PackagePath="build\" />
     <None Include="build\DotnetAILab.ModelGarden.Classification.ZeroShotDeBERTa.targets" Pack="true" PackagePath="build\" />
   </ItemGroup>
