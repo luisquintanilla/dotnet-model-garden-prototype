@@ -39,12 +39,13 @@ jobs:
         shell: bash
         run: |
           mkdir -p local-packages
-          # Build ModelPackages SDK (uses Version=0.1.0 from Directory.Build.props)
+          # Build ModelPackages SDK (pack only the SDK project, not samples)
           git clone --depth 1 https://github.com/luisquintanilla/model-packages-prototype.git ./temp-model-packages
-          dotnet pack ./temp-model-packages -c Release -o ./local-packages
-          # Build text inference packages (uses MinVer — override to match our PackageReference versions)
+          dotnet pack ./temp-model-packages/src/ModelPackages -c Release -o ./local-packages
+          # Build text inference packages (pack src/ projects only, override MinVer)
           git clone --depth 1 https://github.com/luisquintanilla/mlnet-text-inference-custom-transforms.git ./temp-inference
-          dotnet pack ./temp-inference/src -c Release -o ./local-packages -p:MinVerVersionOverride=0.1.0-preview.1.1
+          dotnet pack ./temp-inference/src/MLNet.TextInference.Onnx -c Release -o ./local-packages -p:MinVerVersionOverride=0.1.0-preview.1.1
+          dotnet pack ./temp-inference/src/MLNet.TextGeneration.OnnxGenAI -c Release -o ./local-packages -p:MinVerVersionOverride=0.1.0-preview.1.1
           rm -rf ./temp-inference ./temp-model-packages
 
       - name: Restore
