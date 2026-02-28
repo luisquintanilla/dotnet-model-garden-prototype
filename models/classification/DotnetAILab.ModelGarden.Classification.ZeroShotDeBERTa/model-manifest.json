@@ -1,19 +1,19 @@
 {
   "model": {
-    "id": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+    "id": "lquint/DeBERTa-v3-base-mnli-fever-anli-onnx",
     "revision": "main",
     "files": [
       {
-        "path": "onnx/model.onnx",
-        "sha256": "TODO",
-        "size": 0
+        "path": "model.onnx",
+        "sha256": "7bccfc660f3206d6601a531a07e857cd95830bd7375e90c6177580ee45d5c2ab",
+        "size": 738608072
       }
     ]
   },
   "sources": {
     "huggingface": {
       "type": "huggingface",
-      "repo": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+      "repo": "lquint/DeBERTa-v3-base-mnli-fever-anli-onnx",
       "revision": "main"
     }
   },
