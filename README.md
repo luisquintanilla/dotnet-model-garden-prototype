@@ -70,7 +70,7 @@ Consumer App
     │ NuGet PackageReference
     ▼
 Model Package (this repo)
-    │ Contains: model-manifest.json + vocab.txt + static facade
+    │ Contains: model-manifest.json + tokenizer files + static facade
     │ NuGet PackageReferences ▼
     ├── ModelPackages (Core SDK) — fetch, cache, verify model binaries
     └── MLNet.TextInference.Onnx — tokenization, ONNX inference, post-processing
@@ -80,7 +80,8 @@ Each model package:
 - **Contains only metadata** (~few KB) — no ONNX binaries in the NuGet
 - **Auto-downloads** the model from HuggingFace on first use
 - **Caches locally** under the user's app data directory
-- **Verifies integrity** via SHA256 hash
+- **Verifies integrity** via SHA256 hash and file size
+- **Supports multi-file models** (e.g., Phi3Mini downloads 6 files into a single directory)
 - **Supports source redirection** via `model-sources.json` or environment variables
 
 ## NuGet Source Setup
@@ -111,7 +112,6 @@ set MODELPACKAGES_SOURCE=company-mirror
 | `ModelPackages` | [model-packages-prototype](https://github.com/luisquintanilla/model-packages-prototype) |
 | `MLNet.TextInference.Onnx` | [mlnet-text-inference-custom-transforms](https://github.com/luisquintanilla/mlnet-text-inference-custom-transforms) |
 | `MLNet.TextGeneration.OnnxGenAI` | [mlnet-text-inference-custom-transforms](https://github.com/luisquintanilla/mlnet-text-inference-custom-transforms) |
-| `MLNet.Embeddings.Onnx` | [mlnet-embedding-custom-transforms](https://github.com/luisquintanilla/mlnet-embedding-custom-transforms) |
 
 ## License
 
