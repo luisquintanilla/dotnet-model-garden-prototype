@@ -26,7 +26,7 @@ public static class RobertaSquad2Model
         ModelOptions? options = null, CancellationToken ct = default)
     {
         var modelPath = await EnsureModelAsync(options, ct);
-        var tokenizerDir = ExtractEmbeddedTokenizer();
+        var tokenizerDir = ModelPackage.ExtractResources(typeof(RobertaSquad2Model).Assembly, "RobertaSquad2");
 
         var mlContext = new MLContext();
         var estimator = mlContext.Transforms.OnnxQa(new OnnxQaOptions
@@ -49,35 +49,6 @@ public static class RobertaSquad2Model
     public static Task VerifyModelAsync(
         ModelOptions? options = null, CancellationToken ct = default)
         => Package.Value.VerifyModelAsync(options, ct);
-
-    private static readonly string[] TokenizerFilePatterns =
-        ["vocab.txt", "vocab.json", "merges.txt", "spm.model", "tokenizer.json",
-         "tokenizer.model", "tokenizer_config.json", "special_tokens_map.json"];
-
-    private static string ExtractEmbeddedTokenizer()
-    {
-        var assembly = typeof(RobertaSquad2Model).Assembly;
-        var tokenizerDir = Path.Combine(
-            Path.GetTempPath(), "modelpackages-tokenizer", "RobertaSquad2");
-        Directory.CreateDirectory(tokenizerDir);
-
-        foreach (var resourceName in assembly.GetManifestResourceNames())
-        {
-            var matchedFile = TokenizerFilePatterns
-                .FirstOrDefault(p => resourceName.EndsWith(p, StringComparison.OrdinalIgnoreCase));
-            if (matchedFile == null) continue;
-
-            var targetPath = Path.Combine(tokenizerDir, matchedFile);
-            if (!File.Exists(targetPath))
-            {
-                using var stream = assembly.GetManifestResourceStream(resourceName)!;
-                using var file = File.Create(targetPath);
-                stream.CopyTo(file);
-            }
-        }
-
-        return tokenizerDir;
-    }
 
     private sealed class QaData
     {
