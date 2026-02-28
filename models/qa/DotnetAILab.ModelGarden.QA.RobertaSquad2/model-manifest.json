@@ -1,19 +1,19 @@
 {
   "model": {
-    "id": "deepset/roberta-base-squad2",
+    "id": "lquint/roberta-base-squad2-onnx",
     "revision": "main",
     "files": [
       {
-        "path": "onnx/model.onnx",
-        "sha256": "TODO",
-        "size": 0
+        "path": "model.onnx",
+        "sha256": "26f5829beeaf81ed922c9edd56469cad81fc84678a4db0632cf5dd3d96f73a10",
+        "size": 496449283
       }
     ]
   },
   "sources": {
     "huggingface": {
       "type": "huggingface",
-      "repo": "deepset/roberta-base-squad2",
+      "repo": "lquint/roberta-base-squad2-onnx",
       "revision": "main"
     }
   },

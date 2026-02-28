@@ -1,19 +1,19 @@
 {
   "model": {
-    "id": "SamLowe/roberta-base-go_emotions",
+    "id": "lquint/roberta-base-go_emotions-onnx",
     "revision": "main",
     "files": [
       {
-        "path": "onnx/model.onnx",
-        "sha256": "TODO",
-        "size": 0
+        "path": "model.onnx",
+        "sha256": "039e4e0399f4167966b114258507f6f8d418651d234a283c7aa7afb736a1f66e",
+        "size": 498891623
       }
     ]
   },
   "sources": {
     "huggingface": {
       "type": "huggingface",
-      "repo": "SamLowe/roberta-base-go_emotions",
+      "repo": "lquint/roberta-base-go_emotions-onnx",
       "revision": "main"
     }
   },
