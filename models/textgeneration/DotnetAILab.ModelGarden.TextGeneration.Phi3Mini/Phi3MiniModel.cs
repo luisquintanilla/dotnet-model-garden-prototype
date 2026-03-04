@@ -18,7 +18,7 @@ public static class Phi3MiniModel
     public static async Task<string> EnsureModelAsync(
         ModelOptions? options = null, CancellationToken ct = default)
     {
-        var files = await Package.Value.EnsureFilesAsync(options, ct);
+        var files = await Package.Value.EnsureFilesAsync(options, ct).ConfigureAwait(false);
         return files.ModelDirectory;
     }
 
@@ -29,7 +29,7 @@ public static class Phi3MiniModel
     public static async Task<OnnxTextGenerationTransformer> CreateTextGeneratorAsync(
         ModelOptions? options = null, CancellationToken ct = default)
     {
-        var modelDir = await EnsureModelAsync(options, ct);
+        var modelDir = await EnsureModelAsync(options, ct).ConfigureAwait(false);
 
         var mlContext = new MLContext();
         var estimator = mlContext.Transforms.OnnxTextGeneration(new OnnxTextGenerationOptions

@@ -26,7 +26,7 @@ public static class BgeSmallEnModel
     public static async Task<IEmbeddingGenerator<string, Embedding<float>>> CreateEmbeddingGeneratorAsync(
         ModelOptions? options = null, CancellationToken ct = default)
     {
-        var modelPath = await EnsureModelAsync(options, ct);
+        var modelPath = await EnsureModelAsync(options, ct).ConfigureAwait(false);
         var tokenizerDir = ModelPackage.ExtractResources(typeof(BgeSmallEnModel).Assembly, "BgeSmallEn");
 
         var mlContext = new MLContext();

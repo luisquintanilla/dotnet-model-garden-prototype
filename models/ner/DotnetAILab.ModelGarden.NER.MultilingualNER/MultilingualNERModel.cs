@@ -28,7 +28,7 @@ public static class MultilingualNERModel
     public static async Task<OnnxNerTransformer> CreateNerAsync(
         ModelOptions? options = null, CancellationToken ct = default)
     {
-        var modelPath = await EnsureModelAsync(options, ct);
+        var modelPath = await EnsureModelAsync(options, ct).ConfigureAwait(false);
         var tokenizerDir = ModelPackage.ExtractResources(typeof(MultilingualNERModel).Assembly, "MultilingualNER");
 
         var mlContext = new MLContext();

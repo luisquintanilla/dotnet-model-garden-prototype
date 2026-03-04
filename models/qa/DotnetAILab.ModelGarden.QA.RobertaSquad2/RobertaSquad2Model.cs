@@ -25,7 +25,7 @@ public static class RobertaSquad2Model
     public static async Task<OnnxQaTransformer> CreateQaAsync(
         ModelOptions? options = null, CancellationToken ct = default)
     {
-        var modelPath = await EnsureModelAsync(options, ct);
+        var modelPath = await EnsureModelAsync(options, ct).ConfigureAwait(false);
         var tokenizerDir = ModelPackage.ExtractResources(typeof(RobertaSquad2Model).Assembly, "RobertaSquad2");
 
         var mlContext = new MLContext();
