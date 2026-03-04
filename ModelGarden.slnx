@@ -33,7 +33,7 @@
     <Project Path="models\audioclassification\DotnetAILab.ModelGarden.AudioClassification.ASTAudioSet\DotnetAILab.ModelGarden.AudioClassification.ASTAudioSet.csproj" />
   </Folder>
   <Folder Name="/models/vad/">
-    <Project Path="models\vad\DotnetAILab.ModelGarden.VAD.SileroV5\DotnetAILab.ModelGarden.VAD.SileroV5.csproj" />
+    <Project Path="models\vad\DotnetAILab.ModelGarden.VAD.SileroVad\DotnetAILab.ModelGarden.VAD.SileroVad.csproj" />
   </Folder>
   <Folder Name="/models/audioembeddings/">
     <Project Path="models\audioembeddings\DotnetAILab.ModelGarden.AudioEmbedding.CLAP\DotnetAILab.ModelGarden.AudioEmbedding.CLAP.csproj" />

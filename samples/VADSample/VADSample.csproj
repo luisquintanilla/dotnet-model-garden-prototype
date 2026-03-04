@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\models\vad\DotnetAILab.ModelGarden.VAD.SileroV5\DotnetAILab.ModelGarden.VAD.SileroV5.csproj" />
+    <ProjectReference Include="..\..\models\vad\DotnetAILab.ModelGarden.VAD.SileroVad\DotnetAILab.ModelGarden.VAD.SileroVad.csproj" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.24.2" />

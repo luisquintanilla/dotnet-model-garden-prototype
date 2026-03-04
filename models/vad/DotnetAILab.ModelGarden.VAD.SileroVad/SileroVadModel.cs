@@ -2,11 +2,12 @@ using Microsoft.ML;
 using MLNet.AudioInference.Onnx;
 using ModelPackages;
 
-namespace DotnetAILab.ModelGarden.VAD.SileroV5;
+namespace DotnetAILab.ModelGarden.VAD.SileroVad;
 
 /// <summary>
-/// Silero VAD v5 voice activity detection model package (~2MB).
+/// Silero VAD v4 voice activity detection model package (~2MB).
 /// Downloads ONNX model on first use, caches locally.
+/// NuGet package version tracks the upstream Silero VAD model version.
 /// </summary>
 public static class SileroVadModel
 {

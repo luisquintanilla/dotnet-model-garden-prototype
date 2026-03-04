@@ -1,4 +1,4 @@
-using DotnetAILab.ModelGarden.VAD.SileroV5;
+using DotnetAILab.ModelGarden.VAD.SileroVad;
 using MLNet.Audio.Core;
 using System.Diagnostics;
 

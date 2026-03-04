@@ -1,6 +1,6 @@
 # VAD (Voice Activity Detection) Sample
 
-> Detect speech segments in audio using [Silero VAD v5](https://github.com/snakers4/silero-vad), a lightweight and fast voice activity detection model.
+> Detect speech segments in audio using [Silero VAD v4](https://github.com/snakers4/silero-vad), a lightweight and fast voice activity detection model.
 
 ## Prerequisites
 
@@ -72,5 +72,5 @@ Done!
 
 ## Model Package References
 
-- [`DotnetAILab.ModelGarden.VAD.SileroV5`](../../models/vad/DotnetAILab.ModelGarden.VAD.SileroV5/) — Silero VAD v5 ONNX model package
+- [`DotnetAILab.ModelGarden.VAD.SileroVad`](../../models/vad/DotnetAILab.ModelGarden.VAD.SileroVad/) — Silero VAD v4 ONNX model package
 - [GitHub: snakers4/silero-vad](https://github.com/snakers4/silero-vad)

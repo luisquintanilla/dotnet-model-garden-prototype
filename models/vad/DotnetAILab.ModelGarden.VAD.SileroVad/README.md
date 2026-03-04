@@ -1,4 +1,4 @@
-# Silero VAD v5 — Voice Activity Detection
+# Silero VAD v4 — Voice Activity Detection
 
 > Lightweight voice activity detection model for identifying speech segments in audio.
 
@@ -6,7 +6,7 @@
 
 Voice Activity Detection (VAD) identifies **which parts of an audio signal contain speech** and which are silence or background noise. [Silero VAD](https://github.com/snakers4/silero-vad) is a compact, high-quality ONNX model that achieves near-state-of-the-art accuracy at a fraction of the size of larger models — only **~1.8 MB**.
 
-This package wraps Silero VAD v5 as a NuGet model package. The ONNX binary is **not** included in the NuGet — it downloads transparently on first use and is cached locally for subsequent calls. This makes it an ideal preprocessing step for ASR, TTS, or any pipeline that benefits from skipping silence.
+This package wraps Silero VAD v4 as a NuGet model package. The ONNX binary is **not** included in the NuGet — it downloads transparently on first use and is cached locally for subsequent calls. This makes it an ideal preprocessing step for ASR, TTS, or any pipeline that benefits from skipping silence.
 
 ## Model Details
 
@@ -23,7 +23,7 @@ This package wraps Silero VAD v5 as a NuGet model package. The ONNX binary is **
 ## Installation
 
 ```bash
-dotnet add package DotnetAILab.ModelGarden.VAD.SileroV5
+dotnet add package DotnetAILab.ModelGarden.VAD.SileroVad
 ```
 
 > **NuGet source** — this package is published to GitHub Packages. See the [root README](../../../README.md#nuget-source-setup) for source configuration.
@@ -31,7 +31,7 @@ dotnet add package DotnetAILab.ModelGarden.VAD.SileroV5
 ## Quick Start
 
 ```csharp
-using DotnetAILab.ModelGarden.VAD.SileroV5;
+using DotnetAILab.ModelGarden.VAD.SileroVad;
 using MLNet.Audio.Core;
 
 // Load your audio (16 kHz mono)
@@ -158,7 +158,7 @@ Use the interface when you want to swap in a different VAD implementation withou
 ## Example: Processing a Long Recording
 
 ```csharp
-using DotnetAILab.ModelGarden.VAD.SileroV5;
+using DotnetAILab.ModelGarden.VAD.SileroVad;
 using MLNet.Audio.Core;
 
 // Load a long recording
