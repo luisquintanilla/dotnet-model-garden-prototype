@@ -62,7 +62,7 @@ jobs:
           if [[ "${{ steps.version.outputs.is_release }}" == "true" ]]; then
             dotnet pack -c Release --no-build -o ./artifacts
           else
-            dotnet pack -c Release --no-build -o ./artifacts /p:VersionSuffix=${{ steps.version.outputs.version_suffix }}
+            dotnet pack -c Release --no-build -o ./artifacts -p:VersionSuffix=${{ steps.version.outputs.version_suffix }}
           fi
         shell: bash
 
