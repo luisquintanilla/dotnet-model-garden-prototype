@@ -28,7 +28,7 @@ public static class ZeroShotDeBERTaModel
     public static async Task<OnnxTextClassificationTransformer> CreateClassifierAsync(
         ModelOptions? options = null, CancellationToken ct = default)
     {
-        var modelPath = await EnsureModelAsync(options, ct);
+        var modelPath = await EnsureModelAsync(options, ct).ConfigureAwait(false);
         var tokenizerDir = ModelPackage.ExtractResources(typeof(ZeroShotDeBERTaModel).Assembly, "ZeroShotDeBERTa");
 
         var mlContext = new MLContext();

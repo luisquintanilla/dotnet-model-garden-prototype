@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>DotnetAILab.ModelGarden.VAD.SileroVad</PackageId>
+    <VersionPrefix>4.0.0</VersionPrefix>
+    <Description>Silero VAD v4 voice activity detection model package. Only ~2MB. Model auto-downloads on first use via ModelPackages SDK. NuGet version tracks upstream Silero VAD version.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ModelPackages" Version="0.1.0-preview.14" />
+    <PackageReference Include="MLNet.AudioInference.Onnx" Version="0.1.0-preview.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="build\DotnetAILab.ModelGarden.VAD.SileroVad.props" Pack="true" PackagePath="build\" />
+    <None Include="build\DotnetAILab.ModelGarden.VAD.SileroVad.targets" Pack="true" PackagePath="build\" />
+  </ItemGroup>
+</Project>

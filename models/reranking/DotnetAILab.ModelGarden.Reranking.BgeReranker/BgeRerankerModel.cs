@@ -25,7 +25,7 @@ public static class BgeRerankerModel
     public static async Task<OnnxRerankerTransformer> CreateRerankerAsync(
         ModelOptions? options = null, CancellationToken ct = default)
     {
-        var modelPath = await EnsureModelAsync(options, ct);
+        var modelPath = await EnsureModelAsync(options, ct).ConfigureAwait(false);
         var tokenizerDir = ModelPackage.ExtractResources(typeof(BgeRerankerModel).Assembly, "BgeReranker");
 
         var mlContext = new MLContext();

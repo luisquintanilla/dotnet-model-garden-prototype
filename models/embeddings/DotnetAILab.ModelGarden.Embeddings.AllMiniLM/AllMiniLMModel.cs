@@ -26,7 +26,7 @@ public static class AllMiniLMModel
     public static async Task<IEmbeddingGenerator<string, Embedding<float>>> CreateEmbeddingGeneratorAsync(
         ModelOptions? options = null, CancellationToken ct = default)
     {
-        var modelPath = await EnsureModelAsync(options, ct);
+        var modelPath = await EnsureModelAsync(options, ct).ConfigureAwait(false);
         var tokenizerDir = ModelPackage.ExtractResources(typeof(AllMiniLMModel).Assembly, "AllMiniLM");
 
         var mlContext = new MLContext();

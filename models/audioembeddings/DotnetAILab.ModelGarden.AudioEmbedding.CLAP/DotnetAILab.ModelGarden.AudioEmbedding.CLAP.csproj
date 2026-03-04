@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>DotnetAILab.ModelGarden.AudioEmbedding.CLAP</PackageId>
+    <Description>CLAP audio embedding model package. Generates 512-dim L2-normalized embeddings from audio. Model auto-downloads on first use via ModelPackages SDK.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ModelPackages" Version="0.1.0-preview.14" />
+    <PackageReference Include="MLNet.AudioInference.Onnx" Version="0.1.0-preview.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="build\DotnetAILab.ModelGarden.AudioEmbedding.CLAP.props" Pack="true" PackagePath="build\" />
+    <None Include="build\DotnetAILab.ModelGarden.AudioEmbedding.CLAP.targets" Pack="true" PackagePath="build\" />
+  </ItemGroup>
+</Project>

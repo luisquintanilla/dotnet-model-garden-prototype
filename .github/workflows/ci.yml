@@ -41,25 +41,30 @@ jobs:
       - name: Build
         run: dotnet build -c Release --no-restore
 
-      # Determine version: tag-based for releases, preview for main
+      # Determine version: tag-based for releases, preview suffix for dev builds.
+      # Each package defines its own VersionPrefix (defaults to 0.1.0 from Directory.Build.props).
+      # Dev builds append -preview.N suffix; release builds use the csproj version as-is.
       - name: Set version
         id: version
         shell: bash
         run: |
           if [[ "${{ github.ref_type }}" == "tag" ]]; then
-            VERSION="${{ github.ref_name }}"
-            VERSION="${VERSION#v}"  # strip leading 'v'
-            echo "version=$VERSION" >> $GITHUB_OUTPUT
             echo "is_release=true" >> $GITHUB_OUTPUT
+            echo "Release build — using per-package VersionPrefix from csproj"
           else
-            VERSION="0.1.0-preview.${{ github.run_number }}"
-            echo "version=$VERSION" >> $GITHUB_OUTPUT
+            echo "version_suffix=preview.${{ github.run_number }}" >> $GITHUB_OUTPUT
             echo "is_release=false" >> $GITHUB_OUTPUT
+            echo "Preview build — suffix: preview.${{ github.run_number }}"
           fi
-          echo "Version: $VERSION"
 
       - name: Pack
-        run: dotnet pack -c Release --no-build -o ./artifacts /p:Version=${{ steps.version.outputs.version }}
+        run: |
+          if [[ "${{ steps.version.outputs.is_release }}" == "true" ]]; then
+            dotnet pack -c Release --no-build -o ./artifacts
+          else
+            dotnet pack -c Release --no-build -o ./artifacts -p:VersionSuffix=${{ steps.version.outputs.version_suffix }}
+          fi
+        shell: bash
 
       - name: List packages
         shell: bash

@@ -28,7 +28,7 @@ public static class BertBaseNERModel
     public static async Task<OnnxNerTransformer> CreateNerAsync(
         ModelOptions? options = null, CancellationToken ct = default)
     {
-        var modelPath = await EnsureModelAsync(options, ct);
+        var modelPath = await EnsureModelAsync(options, ct).ConfigureAwait(false);
         var tokenizerDir = ModelPackage.ExtractResources(typeof(BertBaseNERModel).Assembly, "BertBaseNER");
 
         var mlContext = new MLContext();
