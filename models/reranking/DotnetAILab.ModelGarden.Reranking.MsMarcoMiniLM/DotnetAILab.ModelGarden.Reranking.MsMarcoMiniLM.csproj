@@ -4,6 +4,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>DotnetAILab.ModelGarden.Reranking.MsMarcoMiniLM</PackageId>
+    <VersionPrefix>2.0.0</VersionPrefix>
     <Description>MS MARCO MiniLM L-6 v2 reranking model package. Model binary auto-downloads on first use via ModelPackages SDK.</Description>
   </PropertyGroup>
   <ItemGroup>

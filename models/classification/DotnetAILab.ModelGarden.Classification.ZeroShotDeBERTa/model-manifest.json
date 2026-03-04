@@ -1,6 +1,7 @@
 {
   "model": {
     "id": "lquint/DeBERTa-v3-base-mnli-fever-anli-onnx",
+    "version": "3.0.0",
     "revision": "main",
     "files": [
       {

@@ -231,6 +231,16 @@ var prompt = $"Context:\n{context}\n\nQuestion: {query}\nAnswer:";
 | BGE Reranker Base | Reranking (alternative) | `DotnetAILab.ModelGarden.Reranking.BgeReranker` |
 | Phi-3 Mini | Text generation | `DotnetAILab.ModelGarden.TextGeneration.Phi3Mini` |
 
+## Versioning
+
+This package's NuGet version tracks the upstream model version. The current version **2.0.0** corresponds to **[ms-marco-MiniLM-L-6-v2](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2)**, where "v2" is the version designated by cross-encoder.
+
+| NuGet Version | Upstream Model |
+|---------------|---------------|
+| 2.0.x | ms-marco-MiniLM-L-6-**v2** |
+
+When the upstream model releases a new version, a new major version of this package will be published with an updated model binary.
+
 ## References
 
 - [cross-encoder/ms-marco-MiniLM-L-6-v2 on Hugging Face](https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2)

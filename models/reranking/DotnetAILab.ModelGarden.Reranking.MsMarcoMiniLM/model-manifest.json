@@ -9,6 +9,7 @@
       }
     ],
     "id": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "version": "2.0.0",
     "revision": "main"
   },
   "sources": {
