@@ -127,7 +127,7 @@ Returns metadata about the model package (ID, source, file sizes).
 
 Verifies the integrity of cached model files using SHA-256 checksums.
 
-> **⚠️ Known Issue:** The SHA-256 hash for the `.onnx.data` file is currently empty in the model manifest. Integrity verification for this file is pending. See [Issue #9](../../issues/9).
+> **⚠️ Known Issue:** The SHA-256 hash for the `.onnx.data` file is currently empty in the model manifest. Integrity verification for this file is pending. See [Issue #9](https://github.com/luisquintanilla/dotnet-model-garden-prototype/issues/9).
 
 ## Inputs & Outputs
 
@@ -171,7 +171,7 @@ The model generates up to **256 tokens** per call. Output may stop earlier if th
 - **256-token generation limit** — The current configuration caps output at 256 tokens. Longer outputs require multiple calls or configuration changes.
 - **INT4 quality trade-off** — 4-bit quantization reduces model quality slightly compared to FP16/FP32. Expect occasional degradation in complex reasoning or nuanced text.
 - **No streaming** — The current API generates the full response synchronously. There is no token-by-token streaming callback.
-- **SHA-256 verification gap** — The `.onnx.data` file hash is empty in the manifest, so integrity verification is incomplete for the model weights file. See [Issue #9](../../issues/9).
+- **SHA-256 verification gap** — The `.onnx.data` file hash is empty in the manifest, so integrity verification is incomplete for the model weights file. See [Issue #9](https://github.com/luisquintanilla/dotnet-model-garden-prototype/issues/9).
 
 ## Example: Chat Completion
 
