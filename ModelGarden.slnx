@@ -25,8 +25,29 @@
   <Folder Name="/models/textgeneration/">
     <Project Path="models\textgeneration\DotnetAILab.ModelGarden.TextGeneration.Phi3Mini\DotnetAILab.ModelGarden.TextGeneration.Phi3Mini.csproj" />
   </Folder>
+  <Folder Name="/models/asr/">
+    <Project Path="models\asr\DotnetAILab.ModelGarden.ASR.WhisperBase\DotnetAILab.ModelGarden.ASR.WhisperBase.csproj" />
+    <Project Path="models\asr\DotnetAILab.ModelGarden.ASR.WhisperTiny\DotnetAILab.ModelGarden.ASR.WhisperTiny.csproj" />
+  </Folder>
+  <Folder Name="/models/audioclassification/">
+    <Project Path="models\audioclassification\DotnetAILab.ModelGarden.AudioClassification.ASTAudioSet\DotnetAILab.ModelGarden.AudioClassification.ASTAudioSet.csproj" />
+  </Folder>
+  <Folder Name="/models/vad/">
+    <Project Path="models\vad\DotnetAILab.ModelGarden.VAD.SileroV5\DotnetAILab.ModelGarden.VAD.SileroV5.csproj" />
+  </Folder>
+  <Folder Name="/models/audioembeddings/">
+    <Project Path="models\audioembeddings\DotnetAILab.ModelGarden.AudioEmbedding.CLAP\DotnetAILab.ModelGarden.AudioEmbedding.CLAP.csproj" />
+  </Folder>
+  <Folder Name="/models/tts/">
+    <Project Path="models\tts\DotnetAILab.ModelGarden.TTS.SpeechT5\DotnetAILab.ModelGarden.TTS.SpeechT5.csproj" />
+  </Folder>
   <Folder Name="/samples/">
     <Project Path="samples\EmbeddingSample\EmbeddingSample.csproj" />
     <Project Path="samples\ClassificationSample\ClassificationSample.csproj" />
+    <Project Path="samples\ASRSample\ASRSample.csproj" />
+    <Project Path="samples\AudioClassificationSample\AudioClassificationSample.csproj" />
+    <Project Path="samples\VADSample\VADSample.csproj" />
+    <Project Path="samples\AudioEmbeddingSample\AudioEmbeddingSample.csproj" />
+    <Project Path="samples\TTSSample\TTSSample.csproj" />
   </Folder>
 </Solution>
