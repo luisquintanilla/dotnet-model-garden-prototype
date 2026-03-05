@@ -1,6 +1,7 @@
 {
   "model": {
     "id": "sentence-transformers/all-MiniLM-L6-v2",
+    "version": "2.0.0",
     "revision": "main",
     "files": [
       {

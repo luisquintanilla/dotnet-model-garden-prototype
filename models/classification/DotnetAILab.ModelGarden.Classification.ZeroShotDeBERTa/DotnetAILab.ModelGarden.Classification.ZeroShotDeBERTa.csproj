@@ -4,6 +4,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>DotnetAILab.ModelGarden.Classification.ZeroShotDeBERTa</PackageId>
+    <VersionPrefix>3.0.0</VersionPrefix>
     <Description>DeBERTa-v3 zero-shot NLI classification model package. Model binary auto-downloads on first use via ModelPackages SDK.</Description>
   </PropertyGroup>
   <ItemGroup>

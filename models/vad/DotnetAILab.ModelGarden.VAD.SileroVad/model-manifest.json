@@ -1,6 +1,7 @@
 {
   "model": {
     "id": "snakers4/silero-vad",
+    "version": "4.0.0",
     "revision": "main",
     "files": [
       {

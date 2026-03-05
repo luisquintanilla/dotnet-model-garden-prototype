@@ -287,6 +287,16 @@ static float CosineSimilarity(float[] a, float[] b)
 - **[DotnetAILab.ModelGarden.Embeddings.GteSmall](../DotnetAILab.ModelGarden.Embeddings.GteSmall/)** — GTE small, strong general-purpose embeddings by Alibaba DAMO.
 - **[DotnetAILab.ModelGarden.AudioEmbedding.CLAP](../../audioembeddings/DotnetAILab.ModelGarden.AudioEmbedding.CLAP/)** — CLAP audio embeddings for audio-text similarity tasks.
 
+## Versioning
+
+This package's NuGet version tracks the upstream model version. The current version **1.5.0** corresponds to **[bge-small-en-v1.5](https://huggingface.co/BAAI/bge-small-en-v1.5)**, where "v1.5" is the version designated by BAAI.
+
+| NuGet Version | Upstream Model |
+|---------------|---------------|
+| 1.5.x | bge-small-en-**v1.5** |
+
+When the upstream model releases a new version, a new major version of this package will be published with an updated model binary.
+
 ## References
 
 - [bge-small-en-v1.5 on Hugging Face](https://huggingface.co/BAAI/bge-small-en-v1.5)
