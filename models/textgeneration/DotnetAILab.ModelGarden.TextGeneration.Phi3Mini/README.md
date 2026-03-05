@@ -257,11 +257,11 @@ public class TextData
 
 ## Versioning
 
-This package's NuGet version tracks the upstream model version. The current version **3.0.0** corresponds to **[Phi-3-mini-4k-instruct](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx)**, where "3" refers to the Phi model generation.
+This package's NuGet version tracks the upstream model version. The current version **3.0.0** corresponds to **[Phi-3-mini-4k-instruct-onnx](https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx)**, where "3" refers to the Phi model generation.
 
 | NuGet Version | Upstream Model |
 |---------------|---------------|
-| 3.0.x | Phi-**3**-mini-4k-instruct |
+| 3.0.x | Phi-**3**-mini-4k-instruct-onnx |
 
 When the upstream model releases a new version, a new major version of this package will be published with an updated model binary.
 

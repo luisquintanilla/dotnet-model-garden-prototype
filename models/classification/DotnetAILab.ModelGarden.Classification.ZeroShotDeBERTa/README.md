@@ -257,11 +257,11 @@ Console.WriteLine($"\n→ Route to: {bestLabel} (confidence: {bestScore:P1})");
 
 ## Versioning
 
-This package's NuGet version tracks the upstream model version. The current version **3.0.0** corresponds to **[DeBERTa-v3-base-mnli-fever-anli](https://huggingface.co/lquint/DeBERTa-v3-base-mnli-fever-anli-onnx)**, where "v3" refers to the DeBERTa architecture version.
+This package's NuGet version tracks the upstream model version. The current version **3.0.0** corresponds to **[DeBERTa-v3-base-mnli-fever-anli-onnx](https://huggingface.co/lquint/DeBERTa-v3-base-mnli-fever-anli-onnx)**, where "v3" refers to the DeBERTa architecture version.
 
 | NuGet Version | Upstream Model |
 |---------------|---------------|
-| 3.0.x | DeBERTa-**v3**-base-mnli-fever-anli |
+| 3.0.x | DeBERTa-**v3**-base-mnli-fever-anli-onnx |
 
 When the upstream model releases a new version, a new major version of this package will be published with an updated model binary.
 
