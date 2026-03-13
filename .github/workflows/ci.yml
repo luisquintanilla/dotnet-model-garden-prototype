@@ -50,7 +50,7 @@ jobs:
 
           # Build audio inference packages (MLNet.AudioInference.Onnx)
           git clone --depth 1 https://github.com/luisquintanilla/mlnet-audio-custom-transforms.git ./temp-audio-inference
-          dotnet pack ./temp-audio-inference -c Release -o ./local-packages -p:MinVerVersionOverride=0.1.0-preview.1
+          dotnet pack ./temp-audio-inference -c Release -o ./local-packages -p:MinVerVersionOverride=0.1.0-preview.2
           rm -rf ./temp-audio-inference
 
           # Build ModelPackages
