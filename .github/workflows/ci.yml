@@ -38,10 +38,15 @@ jobs:
       - name: Build local dependencies from source
         shell: bash
         run: |
-          # Build inference packages (MLNet.ImageInference.Onnx, MLNet.ImageGeneration.OnnxGenAI)
-          git clone --depth 1 https://github.com/luisquintanilla/mlnet-text-inference-custom-transforms.git ./temp-inference
-          dotnet pack ./temp-inference -c Release -o ./local-packages -p:MinVerVersionOverride=0.1.0-preview.1
-          rm -rf ./temp-inference
+          # Build text inference packages (MLNet.TextInference.Onnx, etc.)
+          git clone --depth 1 https://github.com/luisquintanilla/mlnet-text-inference-custom-transforms.git ./temp-text-inference
+          dotnet pack ./temp-text-inference -c Release -o ./local-packages -p:MinVerVersionOverride=0.1.0-preview.1
+          rm -rf ./temp-text-inference
+
+          # Build image inference packages (MLNet.ImageInference.Onnx, MLNet.ImageGeneration.OnnxGenAI)
+          git clone --depth 1 https://github.com/luisquintanilla/mlnet-image-inference-custom-transforms.git ./temp-image-inference
+          dotnet pack ./temp-image-inference -c Release -o ./local-packages -p:MinVerVersionOverride=0.1.0-preview.1
+          rm -rf ./temp-image-inference
 
           # Build ModelPackages
           git clone --depth 1 https://github.com/luisquintanilla/model-packages-prototype.git ./temp-model-packages
