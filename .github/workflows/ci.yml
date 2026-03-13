@@ -48,6 +48,11 @@ jobs:
           dotnet pack ./temp-image-inference -c Release -o ./local-packages -p:MinVerVersionOverride=0.1.0-preview.1
           rm -rf ./temp-image-inference
 
+          # Build audio inference packages (MLNet.AudioInference.Onnx)
+          git clone --depth 1 https://github.com/luisquintanilla/mlnet-audio-custom-transforms.git ./temp-audio-inference
+          dotnet pack ./temp-audio-inference -c Release -o ./local-packages -p:MinVerVersionOverride=0.1.0-preview.1
+          rm -rf ./temp-audio-inference
+
           # Build ModelPackages
           git clone --depth 1 https://github.com/luisquintanilla/model-packages-prototype.git ./temp-model-packages
           mkdir -p ./temp-model-packages/local-packages
