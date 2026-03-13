@@ -1,0 +1,21 @@
+{
+  "model": {
+    "id": "openai/clip-vit-base-patch32",
+    "revision": "main",
+    "files": [
+      {
+        "path": "onnx/vision_model.onnx",
+        "sha256": "71D6E882F85E00C48829AF8F4A5BB026078828CD492A27CE957CAF78B4C0D9E8",
+        "size": 352714841
+      }
+    ]
+  },
+  "sources": {
+    "huggingface": {
+      "type": "huggingface",
+      "repo": "lquint/clip-vit-base-patch32-onnx",
+      "revision": "main"
+    }
+  },
+  "defaultSource": "huggingface"
+}

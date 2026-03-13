@@ -8,7 +8,7 @@
     <Description>Silero VAD v4 voice activity detection model package. Only ~2MB. Model auto-downloads on first use via ModelPackages SDK. NuGet version tracks upstream Silero VAD version.</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ModelPackages" Version="0.1.0-preview.14" />
+    <PackageReference Include="ModelPackages" Version="0.1.0-preview.15" />
     <PackageReference Include="MLNet.AudioInference.Onnx" Version="0.1.0-preview.2" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>DotnetAILab.ModelGarden.ObjectDetection.YoloV8s</PackageId>
+    <Description>YOLOv8s object detection model package. Detects objects in images with bounding boxes and labels. Model auto-downloads on first use via ModelPackages SDK.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ModelPackages" Version="0.1.0-preview.15" />
+    <PackageReference Include="MLNet.ImageInference.Onnx" Version="0.1.0-preview.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="build\DotnetAILab.ModelGarden.ObjectDetection.YoloV8s.props" Pack="true" PackagePath="build\" />
+    <None Include="build\DotnetAILab.ModelGarden.ObjectDetection.YoloV8s.targets" Pack="true" PackagePath="build\" />
+  </ItemGroup>
+</Project>

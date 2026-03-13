@@ -41,6 +41,36 @@
   <Folder Name="/models/tts/">
     <Project Path="models\tts\DotnetAILab.ModelGarden.TTS.SpeechT5\DotnetAILab.ModelGarden.TTS.SpeechT5.csproj" />
   </Folder>
+  <Folder Name="/models/imageclassification/">
+    <Project Path="models\imageclassification\DotnetAILab.ModelGarden.ImageClassification.ViTBase\DotnetAILab.ModelGarden.ImageClassification.ViTBase.csproj" />
+  </Folder>
+  <Folder Name="/models/objectdetection/">
+    <Project Path="models\objectdetection\DotnetAILab.ModelGarden.ObjectDetection.YoloV8s\DotnetAILab.ModelGarden.ObjectDetection.YoloV8s.csproj" />
+  </Folder>
+  <Folder Name="/models/imagesegmentation/">
+    <Project Path="models\imagesegmentation\DotnetAILab.ModelGarden.ImageSegmentation.SegFormerB0\DotnetAILab.ModelGarden.ImageSegmentation.SegFormerB0.csproj" />
+  </Folder>
+  <Folder Name="/models/depthestimation/">
+    <Project Path="models\depthestimation\DotnetAILab.ModelGarden.DepthEstimation.DPTHybrid\DotnetAILab.ModelGarden.DepthEstimation.DPTHybrid.csproj" />
+  </Folder>
+  <Folder Name="/models/imageembeddings/">
+    <Project Path="models\imageembeddings\DotnetAILab.ModelGarden.ImageEmbedding.CLIPViT\DotnetAILab.ModelGarden.ImageEmbedding.CLIPViT.csproj" />
+  </Folder>
+  <Folder Name="/models/zeroshotclassification/">
+    <Project Path="models\zeroshotclassification\DotnetAILab.ModelGarden.ZeroShotClassification.CLIPViT\DotnetAILab.ModelGarden.ZeroShotClassification.CLIPViT.csproj" />
+  </Folder>
+  <Folder Name="/models/imagecaptioning/">
+    <Project Path="models\imagecaptioning\DotnetAILab.ModelGarden.ImageCaptioning.GITBaseCoco\DotnetAILab.ModelGarden.ImageCaptioning.GITBaseCoco.csproj" />
+  </Folder>
+  <Folder Name="/models/visualqa/">
+    <Project Path="models\visualqa\DotnetAILab.ModelGarden.VisualQA.GITBaseTextVQA\DotnetAILab.ModelGarden.VisualQA.GITBaseTextVQA.csproj" />
+  </Folder>
+  <Folder Name="/models/segmentanything/">
+    <Project Path="models\segmentanything\DotnetAILab.ModelGarden.SegmentAnything.SAM2HieraTiny\DotnetAILab.ModelGarden.SegmentAnything.SAM2HieraTiny.csproj" />
+  </Folder>
+  <Folder Name="/models/texttoimage/">
+    <Project Path="models\texttoimage\DotnetAILab.ModelGarden.TextToImage.StableDiffusionV14\DotnetAILab.ModelGarden.TextToImage.StableDiffusionV14.csproj" />
+  </Folder>
   <Folder Name="/samples/">
     <Project Path="samples\EmbeddingSample\EmbeddingSample.csproj" />
     <Project Path="samples\ClassificationSample\ClassificationSample.csproj" />
@@ -49,5 +79,15 @@
     <Project Path="samples\VADSample\VADSample.csproj" />
     <Project Path="samples\AudioEmbeddingSample\AudioEmbeddingSample.csproj" />
     <Project Path="samples\TTSSample\TTSSample.csproj" />
+    <Project Path="samples\ImageClassificationSample\ImageClassificationSample.csproj" />
+    <Project Path="samples\ObjectDetectionSample\ObjectDetectionSample.csproj" />
+    <Project Path="samples\ImageSegmentationSample\ImageSegmentationSample.csproj" />
+    <Project Path="samples\DepthEstimationSample\DepthEstimationSample.csproj" />
+    <Project Path="samples\ImageEmbeddingSample\ImageEmbeddingSample.csproj" />
+    <Project Path="samples\ZeroShotClassificationSample\ZeroShotClassificationSample.csproj" />
+    <Project Path="samples\ImageCaptioningSample\ImageCaptioningSample.csproj" />
+    <Project Path="samples\VisualQASample\VisualQASample.csproj" />
+    <Project Path="samples\SegmentAnythingSample\SegmentAnythingSample.csproj" />
+    <Project Path="samples\TextToImageSample\TextToImageSample.csproj" />
   </Folder>
 </Solution>

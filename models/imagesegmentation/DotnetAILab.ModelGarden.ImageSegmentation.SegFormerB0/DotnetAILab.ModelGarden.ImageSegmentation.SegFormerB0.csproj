@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>DotnetAILab.ModelGarden.ImageSegmentation.SegFormerB0</PackageId>
+    <Description>SegFormer-B0 image segmentation model package. Segments images into ADE20K 150 semantic classes. Model auto-downloads on first use via ModelPackages SDK.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ModelPackages" Version="0.1.0-preview.15" />
+    <PackageReference Include="MLNet.ImageInference.Onnx" Version="0.1.0-preview.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="build\DotnetAILab.ModelGarden.ImageSegmentation.SegFormerB0.props" Pack="true" PackagePath="build\" />
+    <None Include="build\DotnetAILab.ModelGarden.ImageSegmentation.SegFormerB0.targets" Pack="true" PackagePath="build\" />
+  </ItemGroup>
+</Project>

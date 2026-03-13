@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>DotnetAILab.ModelGarden.TextToImage.StableDiffusionV14</PackageId>
+    <Description>Stable Diffusion v1.4 text-to-image generation model package. Generates images from text prompts using ONNX GenAI runtime. Model auto-downloads on first use via ModelPackages SDK.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ModelPackages" Version="0.1.0-preview.15" />
+    <PackageReference Include="MLNet.ImageGeneration.OnnxGenAI" Version="0.1.0-preview.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="build\DotnetAILab.ModelGarden.TextToImage.StableDiffusionV14.props" Pack="true" PackagePath="build\" />
+    <None Include="build\DotnetAILab.ModelGarden.TextToImage.StableDiffusionV14.targets" Pack="true" PackagePath="build\" />
+  </ItemGroup>
+</Project>
