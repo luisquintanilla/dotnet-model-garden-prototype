@@ -39,6 +39,7 @@ jobs:
         shell: bash
         run: |
           git clone --depth 1 https://github.com/luisquintanilla/model-packages-prototype.git ./temp-model-packages
+          mkdir -p ./temp-model-packages/local-packages
           dotnet pack ./temp-model-packages/src/ModelPackages/ModelPackages.csproj -c Release -o ./local-packages -p:Version=0.1.0-preview.15
           rm -rf ./temp-model-packages
 
